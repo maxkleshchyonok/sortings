@@ -14,9 +14,10 @@ function App() {
 
   return (
     <div className='app'>
-      <h1>Sortings Comparison</h1>
+      <h1 className="title">Sortings Comparison</h1>
       <div className="sortBlocks">
         <Bubble array={array} />
+        <h1>VS</h1>
         <Quick array={array} />
       </div>
     </div>

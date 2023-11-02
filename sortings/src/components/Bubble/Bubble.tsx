@@ -1,8 +1,9 @@
-import './Bubble.scss';
-
 const Bubble = ({ array }: { array: number[] }) => {
 
+  let time;
+
   const sort = () => {
+    const start = Date.now();
     for (let i = 0; i < array.length; i++) {
       for (let j = 0; j < array.length; j++) {
         if (array[j] > array[j + 1]) {
@@ -12,15 +13,18 @@ const Bubble = ({ array }: { array: number[] }) => {
         }
       }
     }
+    const end = Date.now();
     console.log(array);
+    time = end - start;
+    document.getElementById('time')!.textContent = time.toString() + ' ms';
   };
 
-  
 
   return (
-    <div className="bubbleBlock">
+    <div className="sortcontainer">
       <h1>Bubble sort:</h1>
-      <button onClick={sort}>Do sorting!</button>
+      <button onClick={sort} className='sortButton'>Do sorting!</button>
+      <h2 id='time' className='timeBlock'></h2>
     </div>
   )
 }

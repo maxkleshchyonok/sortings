@@ -1,5 +1,3 @@
-
-
 const Quick = ({ array }: { array: number[] }) => {
 
     const quicksort = (array: number[]): number[] => {
@@ -21,14 +19,18 @@ const Quick = ({ array }: { array: number[] }) => {
     };
 
     const doSort = () => {
+       const start = Date.now();
        const sortedArr = quicksort(array);
+       const end = Date.now();
        console.log(sortedArr);
+       document.getElementById('timeQuick')!.textContent = (end - start).toString() + ' ms';
     };
 
     return (
-        <div className="quickBlock">
+        <div className="sortcontainer">
             <h1>Quick sort:</h1>
-            <button onClick={doSort}>Do quick sorting!</button>
+            <button onClick={doSort} className="sortButton">Do quick sorting!</button>
+            <h2 id="timeQuick" className='timeBlock'></h2>
         </div>
     )
 }
