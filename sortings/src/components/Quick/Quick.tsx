@@ -1,3 +1,5 @@
+import { executeSort } from "../../utils/functions";
+
 const Quick = ({ array }: { array: number[] }) => {
 
     const quicksort = (array: number[]): number[] => {
@@ -29,7 +31,7 @@ const Quick = ({ array }: { array: number[] }) => {
     return (
         <div className="sortcontainer">
             <h1>Quick sort:</h1>
-            <button onClick={doSort} className="sortButton">Do quick sorting!</button>
+            <button onClick={() => executeSort(doSort)} className="sortButton">Do quick sorting!</button>
             <h2 id="timeQuick" className='timeBlock'></h2>
         </div>
     )

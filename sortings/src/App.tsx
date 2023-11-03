@@ -6,7 +6,7 @@ import './App.scss';
 function App() {
 
   const notSorted: number[] = [];
-  for (let i = 0; i < 10000; i++) {
+  for (let i = 0; i < 100000; i++) {
     notSorted.push(Math.floor(Math.random() * 101));
   }
 
@@ -19,6 +19,7 @@ function App() {
         <Bubble array={array} />
         <h1>VS</h1>
         <Quick array={array} />
+        <div id="loading-icon"></div>
       </div>
     </div>
   )

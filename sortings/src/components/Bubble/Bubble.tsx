@@ -1,3 +1,5 @@
+import { executeSort } from "../../utils/functions";
+
 const Bubble = ({ array }: { array: number[] }) => {
 
   let time;
@@ -23,7 +25,7 @@ const Bubble = ({ array }: { array: number[] }) => {
   return (
     <div className="sortcontainer">
       <h1>Bubble sort:</h1>
-      <button onClick={sort} className='sortButton'>Do sorting!</button>
+      <button onClick={() => executeSort(sort)} className='sortButton'>Do sorting!</button>
       <h2 id='time' className='timeBlock'></h2>
     </div>
   )

@@ -5,6 +5,30 @@
          margin-left: 5vw;
     }
 
+    #loading-icon {
+        display: none;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        top: 5%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 7px solid black;
+        border-top-color: greenyellow;
+        animation: spin 2s infinite linear;
+      }
+
+      .load {
+        display: block;
+      }
+      
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
     .sortBlocks {
         margin-top: 15vh;
         display: flex;
@@ -42,6 +66,10 @@
 }
 
 @media (max-width: 600px) {
+
+    #loading-icon {
+        margin-top: 10vh;
+    }
 
     .sortBlocks {
         flex-direction: column;
