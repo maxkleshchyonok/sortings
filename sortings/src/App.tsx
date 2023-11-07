@@ -10,7 +10,7 @@ function App() {
     notSorted.push(Math.floor(Math.random() * 101));
   }
 
-  const [array, setArray] = useState([...notSorted]);
+  const [array] = useState([...notSorted]);
 
   return (
     <div className='app'>

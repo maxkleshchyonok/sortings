@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  client:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "9091:80"
+    stdin_open: true
+    tty: true
