@@ -2,6 +2,7 @@ import { useState } from "react";
 import Bubble from "./components/Bubble/Bubble";
 import Quick from "./components/Quick/Quick";
 import './App.scss';
+import Animation from "./components/animation/animation";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Quick array={array} />
         <div id="loading-icon"></div>
       </div>
+      <Animation />
     </div>
   )
 
