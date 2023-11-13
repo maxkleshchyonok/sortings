@@ -8,7 +8,7 @@ import DropDown from "./components/dropdown/dropdown";
 function App() {
 
   const notSorted: number[] = [];
-  for (let i = 0; i < 100000; i++) {
+  for (let i = 0; i < 1000; i++) {
     notSorted.push(Math.floor(Math.random() * 101));
   }
 

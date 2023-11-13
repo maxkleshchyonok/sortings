@@ -37,3 +37,9 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+@media screen and (max-width: 600px) {
+    .dropbtn {
+        width: 25vw;
+    }
+  }
