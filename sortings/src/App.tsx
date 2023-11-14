@@ -4,6 +4,7 @@ import Quick from "./components/Quick/Quick";
 import './App.scss';
 import Animation from "./components/animation/animation";
 import DropDown from "./components/dropdown/dropdown";
+import RickMorty from "./components/rickmorty/RickMorty";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       </div>
       <DropDown />
       <Animation />
+      <RickMorty />
     </div>
   )
 
